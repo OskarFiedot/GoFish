@@ -17,6 +17,16 @@ po czym następuje kolej komputera, na pytanie gracza o wysokość karty. W anal
 Gdy któryś z graczy zbierze wszystkie karty danej wysokości (czyli 4), znikają one z jego ręki i są odkładane na stos. Wygrywa gracz, który uzbierał w trakcie 
 gry więcej takich stosów. 
 
+Sam początek gry:
+![image](https://user-images.githubusercontent.com/100859707/157266329-92ab790c-ab59-4598-b2aa-1bd8b16ade7c.png)
+
+Końcowy etap rozgrywki:
+![image](https://user-images.githubusercontent.com/100859707/157267109-d1262078-f040-4fda-b622-9f9fd423f259.png)
+
+Koniec gry:  
+![image](https://user-images.githubusercontent.com/100859707/157268468-5198cb3e-950e-4042-bb6b-053cf37a79eb.png)
+
+
 ## Oznaczenie kart
 Karty przedstawiane są w formacie: |{wysokość karty}{kolor karty}|  
 
