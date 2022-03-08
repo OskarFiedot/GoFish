@@ -22,9 +22,6 @@ namespace GoFish
 
             Symulacja = symulacja;
 
-            //Karty = new List<Karta>();
-
-            //Stosy = new List<string>();
         }
 
         public void SprawdzStosy()
