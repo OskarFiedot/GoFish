@@ -1,6 +1,6 @@
 ﻿using GoFish;
 
-var talia = new Talia();
+var talia = new Talia();    
 
 Console.WriteLine("Podaj swoją nazwę: ");
 var czlowiek = new Gracz(Console.ReadLine(), false);
@@ -13,16 +13,26 @@ komputer.SprawdzStosy();
 Tura(czlowiek, komputer, talia);
 
 
-void LosujKarty(Gracz pierwszy, Gracz drugi, Talia talia)
+void LosujKarty(Gracz pierwszy, Gracz drugi, Talia talia) 
 {
-    Console.WriteLine("\nIle kart losować na start?: ");
+    int ileLosowac;
 
-    var ileLosowac = int.Parse(Console.ReadLine());
-
-    if (ileLosowac > 10)
+    do
     {
-        // wyjątek              
-    }
+        Console.WriteLine("\nIle kart losować na start?: (<=10)");
+
+        while (!int.TryParse(Console.ReadLine(), out ileLosowac))
+        {
+            Console.WriteLine("\nCoś poszło nie tak, spróbuj jeszcze raz:");
+        }
+
+        if (ileLosowac > 10)
+        {
+            Separator();
+            Console.WriteLine("\nLiczba zbyt duża, spróbuj jeszcze raz.");
+            Separator();
+        }
+    } while (ileLosowac > 10);
 
     var random = new Random();
     int losowyIndeksKarty;
@@ -43,7 +53,7 @@ void LosujKarty(Gracz pierwszy, Gracz drugi, Talia talia)
     }
 }
 
-void Tura(Gracz pytajacy, Gracz pytany, Talia talia)
+void Tura(Gracz pytajacy, Gracz pytany, Talia talia)    
 {
     talia.WyswietlLiczbeKartWTalii();
     pytajacy.WyswietlStosyGracza();
@@ -155,7 +165,7 @@ void CzyKoniec(Gracz gracz_1, Gracz gracz_2, Talia talia)
             gracz_1.WyswietlStosyGracza();
             gracz_2.WyswietlStosyGracza();
             Separator();
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            System.Environment.Exit(0);
         }
         else if (gracz_2.Stosy.Count > gracz_1.Stosy.Count)
         {
@@ -164,7 +174,7 @@ void CzyKoniec(Gracz gracz_1, Gracz gracz_2, Talia talia)
             gracz_2.WyswietlStosyGracza();
             gracz_1.WyswietlStosyGracza();
             Separator();
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            System.Environment.Exit(0);
         }
         else
         {
@@ -173,7 +183,7 @@ void CzyKoniec(Gracz gracz_1, Gracz gracz_2, Talia talia)
             gracz_1.WyswietlStosyGracza();
             gracz_2.WyswietlStosyGracza();
             Separator();
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            System.Environment.Exit(0);
         }
     }
 }
