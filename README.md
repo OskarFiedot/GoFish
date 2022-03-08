@@ -33,5 +33,5 @@ K - Karo
 k - Kier  
 P - Pik  
 
-#### Gra jest napisana w C#, bez zastosowania żadnych zewnętrznych bibliotek, do odpalenia potrzebny jest zainstalowanny .Net 6 na komputerze. 
+#### Gra jest napisana w C#, bez zastosowania żadnych zewnętrznych bibliotek, do odpalenia potrzebny jest zainstalowany .Net 6 na komputerze. 
 
